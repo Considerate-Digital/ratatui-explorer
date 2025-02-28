@@ -471,7 +471,7 @@ impl FileExplorer {
             let mut files = Vec::with_capacity(1 + dirs.len() + none_dirs.len());
 
             files.push(File {
-                name: "../".to_owned(),
+                name: "↑ Parent Folder ↑".to_owned(),
                 path: parent.to_path_buf(),
                 is_dir: true,
             });
