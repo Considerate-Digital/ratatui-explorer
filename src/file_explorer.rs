@@ -461,6 +461,7 @@ impl FileExplorer {
                     File { name, path, is_dir }
                 })
             })
+            .filter(|file| !file.name.starts_with("."))
             .partition(|file| file.is_dir);
 
         dirs.sort_unstable_by(|f1, f2| f1.name.cmp(&f2.name));
